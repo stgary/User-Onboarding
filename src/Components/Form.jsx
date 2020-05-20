@@ -13,9 +13,15 @@ export default function Form(props) {
     return(
         <div className='container'>
             <div className='wrapper'>
-              <h2>User Onboarding</h2>
+              <h2>User Onboarding</h2>              
+                <div className='errors'>
+                  <div>{ errors.name }</div>
+                  <div>{ errors.email }</div>
+                  <div>{ errors.password }</div>
+                  <div>{ errors.terms }</div>
+                </div>
                 <form onSubmit={ onSubmit }>
-                    <label>Name:
+                    <label>Name:&nbsp;
                         <input 
                             name='name'
                             type='text'
@@ -23,7 +29,7 @@ export default function Form(props) {
                             onChange={ onInputChange }
                         />
                     </label>
-                    <label>Email:
+                    <label>Email:&nbsp;
                         <input 
                             name='email'
                             type='text'
@@ -31,7 +37,7 @@ export default function Form(props) {
                             onChange={ onInputChange }
                         />
                     </label>
-                    <label>Password:
+                    <label>Password:&nbsp;
                         <input 
                             name='password'
                             type='text'
@@ -39,7 +45,7 @@ export default function Form(props) {
                             onChange={ onInputChange }
                         />
                     </label>
-                    <label>Terms:
+                    <label>Terms:&nbsp;
                         <input 
                             name='terms'
                             type='checkbox'
@@ -47,11 +53,8 @@ export default function Form(props) {
                             checked={ values.terms } 
                         />
                     </label>
-                    <input
-                        name='submit'
-                        type='button'
-                        disabled={disabled}
-                    />
+                    <button name='submit' disabled={disabled}>Submit</button>
+                    
                 </form>
             </div>
         </div>
