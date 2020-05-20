@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Form from './components/Form'
+import User from './components/User'
 
 const initialFormValues = {
   name: '',
@@ -49,7 +50,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Form />
+        <Form 
+          values={ formValues }
+          onChange={ onInputChange }
+          onSubmit={ onSubmit }
+          onCheckboxChange={ onCheckboxChange }
+          disabled={ disabled }
+          errors={ formErrors }
+        />
+        <User />
       </header>
     </div>
   );
