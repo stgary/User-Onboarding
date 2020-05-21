@@ -50,10 +50,10 @@ export default function Form(props) {
                             name='terms'
                             type='checkbox'
                             onChange={ onCheckboxChange }
-                            checked={ values.terms } 
+                            checked={ values.terms }
                         />
                     </label>
-                    <button name='submit' disabled={disabled}>Submit</button>
+                    <button className='submit' disabled={disabled}>Submit</button>
                     
                 </form>
             </div>
